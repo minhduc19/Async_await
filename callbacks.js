@@ -3,6 +3,7 @@ const posts = [
 	{title: "Post two", body: "This is post two"},
 ];
 
+//dump posts to HTML 
 function getPosts() {
 	setTimeout(()=>{
 		let output = "";
@@ -13,6 +14,7 @@ function getPosts() {
 	},1000);
 }
 
+//append a post to the list
 function createPosts(post) {
 	setTimeout(() => {
 		posts.push(post);
