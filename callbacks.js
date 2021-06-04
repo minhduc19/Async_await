@@ -15,13 +15,13 @@ function getPosts() {
 }
 
 //append a post to the list
-function createPosts(post) {
+function createPosts(post,callback) {
 	setTimeout(() => {
 		posts.push(post);
 		console.log(posts);
+		callback();
 	},2000)
 }
 
 let newPost = {title: "Post three", body: "This is post three"};
-createPosts(newPost);
-getPosts();
+createPosts(newPost,getPosts); //do createPosts first and then getPosts later
